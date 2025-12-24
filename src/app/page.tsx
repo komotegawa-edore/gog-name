@@ -73,7 +73,7 @@ export default function Home() {
       <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center text-slate-800 mb-12">
-            <span className="gradient-bg bg-clip-text text-transparent">3つの学習モード</span>で効率的に覚える
+            <span style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #9333ea 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>3つの学習モード</span>で効率的に覚える
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -130,21 +130,21 @@ export default function Home() {
               <div className="flex items-center justify-center mb-2">
                 <DogIcon className="w-8 h-8 text-indigo-600" />
               </div>
-              <div className="text-4xl font-bold gradient-bg bg-clip-text text-transparent">20+</div>
+              <div className="text-4xl font-bold" style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #9333ea 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>20+</div>
               <div className="text-slate-600 mt-2">犬種を収録</div>
             </div>
             <div>
               <div className="flex items-center justify-center mb-2">
                 <CardIcon className="w-8 h-8 text-indigo-600" />
               </div>
-              <div className="text-4xl font-bold gradient-bg bg-clip-text text-transparent">3</div>
+              <div className="text-4xl font-bold" style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #9333ea 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>3</div>
               <div className="text-slate-600 mt-2">学習モード</div>
             </div>
             <div>
               <div className="flex items-center justify-center mb-2">
                 <InfinityIcon className="w-8 h-8 text-indigo-600" />
               </div>
-              <div className="text-4xl font-bold gradient-bg bg-clip-text text-transparent">∞</div>
+              <div className="text-4xl font-bold" style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #9333ea 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>∞</div>
               <div className="text-slate-600 mt-2">何度でも学習可能</div>
             </div>
           </div>

@@ -112,7 +112,7 @@ export default function Quiz({ onBack }: QuizProps) {
           </div>
           <h2 className="text-3xl font-bold text-slate-800 mb-4">クイズ完了!</h2>
           <div className="mb-6">
-            <div className="text-6xl font-bold gradient-bg bg-clip-text text-transparent mb-2">
+            <div className="text-6xl font-bold mb-2" style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #9333ea 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               {score} / {questions.length}
             </div>
             <p className="text-slate-500">正解率: {percentage}%</p>
