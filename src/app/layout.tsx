@@ -15,6 +15,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "犬の種類を覚えよう | Dog Breeds Learning",
   description: "楽しく犬の種類を学べるWebアプリ。フラッシュカードとクイズで効率的に覚えましょう。",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: "犬の種類を覚えよう",
+  },
 };
 
 export default function RootLayout({
