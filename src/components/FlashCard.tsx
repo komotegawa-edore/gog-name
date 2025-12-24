@@ -71,12 +71,12 @@ export default function FlashCard({ onBack }: FlashCardProps) {
       >
         <div className={`flip-card-inner relative w-full h-full ${isFlipped ? 'flipped' : ''}`}>
           <div className="flip-card-front absolute w-full h-full rounded-2xl bg-white card-shadow-lg overflow-hidden">
-            <div className="relative w-full h-64">
+            <div className="relative w-full h-64 bg-slate-100">
               <Image
                 src={currentDog.image}
                 alt={currentDog.nameJa}
                 fill
-                className="object-cover"
+                className="object-contain"
                 unoptimized
               />
             </div>

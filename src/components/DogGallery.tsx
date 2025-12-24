@@ -49,12 +49,12 @@ export default function DogGallery({ onBack }: DogGalleryProps) {
             key={dog.id}
             className="bg-white rounded-xl card-shadow overflow-hidden hover:card-shadow-lg transition-shadow"
           >
-            <div className="relative w-full h-48">
+            <div className="relative w-full h-48 bg-slate-100">
               <Image
                 src={dog.image}
                 alt={dog.nameJa}
                 fill
-                className="object-cover"
+                className="object-contain"
                 unoptimized
               />
               <div className="absolute top-2 right-2">

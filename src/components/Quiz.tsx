@@ -160,12 +160,12 @@ export default function Quiz({ onBack }: QuizProps) {
       </div>
 
       <div className="bg-white rounded-2xl card-shadow-lg overflow-hidden mb-6">
-        <div className="relative w-full h-64">
+        <div className="relative w-full h-64 bg-slate-100">
           <Image
             src={currentQuestion.dog.image}
             alt="犬の写真"
             fill
-            className="object-cover"
+            className="object-contain"
             unoptimized
           />
         </div>
