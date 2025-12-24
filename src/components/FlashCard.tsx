@@ -1,7 +1,7 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { DogBreed, dogBreeds } from '@/data/dogs';
+import { useState, useCallback } from 'react';
+import { DogBreed, dogBreeds, sections, getDogsBySection } from '@/data/dogs';
 import Image from 'next/image';
 import { ArrowLeftIcon, ShuffleIcon, ChevronLeftIcon, ChevronRightIcon } from './Icons';
 
@@ -10,19 +10,36 @@ interface FlashCardProps {
 }
 
 export default function FlashCard({ onBack }: FlashCardProps) {
+  const [selectedSection, setSelectedSection] = useState<number | null>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFlipped, setIsFlipped] = useState(false);
   const [shuffledDogs, setShuffledDogs] = useState<DogBreed[]>([]);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  useEffect(() => {
-    const shuffled = [...dogBreeds].sort(() => Math.random() - 0.5);
+  const generateCards = useCallback((sectionId: number) => {
+    const sectionDogs = getDogsBySection(sectionId);
+    const shuffled = [...sectionDogs].sort(() => Math.random() - 0.5);
     setShuffledDogs(shuffled);
+    setCurrentIndex(0);
+    setIsFlipped(false);
+    setCurrentImageIndex(0);
   }, []);
+
+  const handleSectionSelect = (sectionId: number) => {
+    setSelectedSection(sectionId);
+    generateCards(sectionId);
+  };
+
+  const handleBackToSections = () => {
+    setSelectedSection(null);
+    setShuffledDogs([]);
+  };
 
   const currentDog = shuffledDogs[currentIndex];
 
   const handleNext = () => {
     setIsFlipped(false);
+    setCurrentImageIndex(0);
     setTimeout(() => {
       setCurrentIndex((prev) => (prev + 1) % shuffledDogs.length);
     }, 150);
@@ -30,6 +47,7 @@ export default function FlashCard({ onBack }: FlashCardProps) {
 
   const handlePrev = () => {
     setIsFlipped(false);
+    setCurrentImageIndex(0);
     setTimeout(() => {
       setCurrentIndex((prev) => (prev - 1 + shuffledDogs.length) % shuffledDogs.length);
     }, 150);
@@ -37,32 +55,104 @@ export default function FlashCard({ onBack }: FlashCardProps) {
 
   const handleFlip = () => {
     setIsFlipped(!isFlipped);
+    setCurrentImageIndex(0);
   };
 
   const handleShuffle = () => {
-    setIsFlipped(false);
-    setCurrentIndex(0);
-    const shuffled = [...dogBreeds].sort(() => Math.random() - 0.5);
-    setShuffledDogs(shuffled);
+    if (selectedSection) {
+      generateCards(selectedSection);
+    }
   };
+
+  const handleNextImage = () => {
+    if (currentDog && currentImageIndex < currentDog.images.length - 1) {
+      setCurrentImageIndex(prev => prev + 1);
+    }
+  };
+
+  const handlePrevImage = () => {
+    if (currentImageIndex > 0) {
+      setCurrentImageIndex(prev => prev - 1);
+    }
+  };
+
+  // セクション選択画面
+  if (selectedSection === null) {
+    return (
+      <div className="w-full max-w-2xl mx-auto">
+        <div className="flex justify-between items-center mb-6">
+          <button
+            onClick={onBack}
+            className="flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium transition-colors"
+          >
+            <ArrowLeftIcon className="w-5 h-5" />
+            戻る
+          </button>
+        </div>
+
+        <h2 className="text-2xl font-bold text-center text-slate-800 mb-8">セクションを選択</h2>
+
+        <div className="space-y-4">
+          {sections.map((section) => (
+            <button
+              key={section.id}
+              onClick={() => handleSectionSelect(section.id)}
+              className="w-full p-6 bg-white rounded-2xl card-shadow hover:card-shadow-lg transition-all text-left"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className={`px-3 py-1 rounded-full text-sm font-bold ${
+                      section.id === 1 ? 'bg-green-100 text-green-700' :
+                      section.id === 2 ? 'bg-yellow-100 text-yellow-700' :
+                      'bg-red-100 text-red-700'
+                    }`}>
+                      {section.name}
+                    </span>
+                  </div>
+                  <p className="text-slate-600">{section.description}</p>
+                </div>
+                <div className="text-indigo-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </button>
+          ))}
+        </div>
+      </div>
+    );
+  }
 
   if (!currentDog) {
     return <div className="text-center py-8">Loading...</div>;
   }
 
+  const currentSection = sections.find(s => s.id === selectedSection);
+
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div className="flex justify-between items-center mb-6">
         <button
-          onClick={onBack}
+          onClick={handleBackToSections}
           className="flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium transition-colors"
         >
           <ArrowLeftIcon className="w-5 h-5" />
           戻る
         </button>
-        <span className="text-slate-500 font-medium">
-          {currentIndex + 1} / {shuffledDogs.length}
-        </span>
+        <div className="flex items-center gap-4">
+          <span className={`px-2 py-1 rounded-full text-xs font-bold ${
+            selectedSection === 1 ? 'bg-green-100 text-green-700' :
+            selectedSection === 2 ? 'bg-yellow-100 text-yellow-700' :
+            'bg-red-100 text-red-700'
+          }`}>
+            {currentSection?.name}
+          </span>
+          <span className="text-slate-500 font-medium">
+            {currentIndex + 1} / {shuffledDogs.length}
+          </span>
+        </div>
       </div>
 
       <div
@@ -73,7 +163,7 @@ export default function FlashCard({ onBack }: FlashCardProps) {
           <div className="flip-card-front absolute w-full h-full rounded-2xl bg-white card-shadow-lg overflow-hidden">
             <div className="relative w-full h-64 bg-slate-100">
               <Image
-                src={currentDog.image}
+                src={currentDog.images[0]}
                 alt={currentDog.nameJa}
                 fill
                 className="object-contain"
@@ -86,13 +176,44 @@ export default function FlashCard({ onBack }: FlashCardProps) {
             </div>
           </div>
 
-          <div className="flip-card-back absolute w-full h-full rounded-2xl gradient-bg p-8 flex flex-col items-center justify-center text-white">
-            <h2 className="text-4xl font-bold mb-2">{currentDog.nameJa}</h2>
-            <p className="text-xl opacity-90 mb-4">{currentDog.name}</p>
-            <div className="text-center space-y-2 opacity-80">
-              <p>原産国: {currentDog.origin}</p>
-              <p>サイズ: {currentDog.size === 'small' ? '小型' : currentDog.size === 'medium' ? '中型' : '大型'}</p>
-              <p className="text-sm mt-4">{currentDog.description}</p>
+          <div className="flip-card-back absolute w-full h-full rounded-2xl gradient-bg overflow-hidden" onClick={(e) => e.stopPropagation()}>
+            <div className="relative w-full h-44 bg-white/10">
+              <Image
+                src={currentDog.images[currentImageIndex]}
+                alt={currentDog.nameJa}
+                fill
+                className="object-contain"
+                unoptimized
+              />
+              {currentDog.images.length > 1 && (
+                <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
+                  <button
+                    onClick={(e) => { e.stopPropagation(); handlePrevImage(); }}
+                    disabled={currentImageIndex === 0}
+                    className={`p-1 rounded-full bg-white/80 ${currentImageIndex === 0 ? 'opacity-30' : 'hover:bg-white'}`}
+                  >
+                    <ChevronLeftIcon className="w-4 h-4 text-slate-700" />
+                  </button>
+                  <span className="text-white text-sm bg-black/30 px-2 py-1 rounded-full">
+                    {currentImageIndex + 1} / {currentDog.images.length}
+                  </span>
+                  <button
+                    onClick={(e) => { e.stopPropagation(); handleNextImage(); }}
+                    disabled={currentImageIndex === currentDog.images.length - 1}
+                    className={`p-1 rounded-full bg-white/80 ${currentImageIndex === currentDog.images.length - 1 ? 'opacity-30' : 'hover:bg-white'}`}
+                  >
+                    <ChevronRightIcon className="w-4 h-4 text-slate-700" />
+                  </button>
+                </div>
+              )}
+            </div>
+            <div className="p-4 text-white text-center">
+              <h2 className="text-2xl font-bold mb-1">{currentDog.nameJa}</h2>
+              <p className="text-lg opacity-90 mb-2">{currentDog.name}</p>
+              <div className="text-sm space-y-1 opacity-80">
+                <p>原産国: {currentDog.origin} | サイズ: {currentDog.size === 'small' ? '小型' : currentDog.size === 'medium' ? '中型' : '大型'}</p>
+                <p>{currentDog.description}</p>
+              </div>
             </div>
           </div>
         </div>

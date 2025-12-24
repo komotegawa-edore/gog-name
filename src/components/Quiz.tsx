@@ -238,7 +238,7 @@ export default function Quiz({ onBack }: QuizProps) {
       <div className="bg-white rounded-2xl card-shadow-lg overflow-hidden mb-6">
         <div className="relative w-full h-64 bg-slate-100">
           <Image
-            src={currentQuestion.dog.image}
+            src={currentQuestion.dog.images[0]}
             alt="犬の写真"
             fill
             className="object-contain"

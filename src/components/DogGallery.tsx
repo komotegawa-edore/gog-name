@@ -51,7 +51,7 @@ export default function DogGallery({ onBack }: DogGalleryProps) {
           >
             <div className="relative w-full h-48 bg-slate-100">
               <Image
-                src={dog.image}
+                src={dog.images[0]}
                 alt={dog.nameJa}
                 fill
                 className="object-contain"
