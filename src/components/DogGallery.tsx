@@ -18,7 +18,7 @@ export default function DogGallery({ onBack }: DogGalleryProps) {
 
   return (
     <div className="w-full max-w-6xl mx-auto">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
         <button
           onClick={onBack}
           className="flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium transition-colors"
@@ -26,12 +26,12 @@ export default function DogGallery({ onBack }: DogGalleryProps) {
           <ArrowLeftIcon className="w-5 h-5" />
           戻る
         </button>
-        <div className="flex gap-2">
+        <div className="flex gap-2 overflow-x-auto w-full sm:w-auto pb-2 sm:pb-0">
           {(['all', 'small', 'medium', 'large'] as const).map((size) => (
             <button
               key={size}
               onClick={() => setFilter(size)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-colors whitespace-nowrap ${
                 filter === size
                   ? 'gradient-bg text-white'
                   : 'bg-white text-slate-600 border border-slate-200 hover:border-indigo-400'

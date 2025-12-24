@@ -50,17 +50,17 @@ export default function Home() {
             楽しく効率的に犬の種類を学べるアプリです。
             フラッシュカードやクイズで知識を定着させましょう。
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
             <button
               onClick={() => setMode('flashcard')}
-              className="px-8 py-4 bg-white text-indigo-600 rounded-full font-bold text-lg hover:bg-opacity-90 transition-all card-shadow-lg flex items-center gap-2"
+              className="px-6 py-3 sm:px-8 sm:py-4 bg-white text-indigo-600 rounded-full font-bold text-base sm:text-lg hover:bg-opacity-90 transition-all card-shadow-lg flex items-center justify-center gap-2"
             >
               <CardIcon className="w-5 h-5" />
               フラッシュカードで学習
             </button>
             <button
               onClick={() => setMode('quiz')}
-              className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-bold text-lg hover:bg-white hover:text-indigo-600 transition-all flex items-center gap-2"
+              className="px-6 py-3 sm:px-8 sm:py-4 bg-transparent border-2 border-white text-white rounded-full font-bold text-base sm:text-lg hover:bg-white hover:text-indigo-600 transition-all flex items-center justify-center gap-2"
             >
               <QuizIcon className="w-5 h-5" />
               クイズに挑戦

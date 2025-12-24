@@ -176,7 +176,7 @@ export default function Quiz({ onBack }: QuizProps) {
         </div>
       </div>
 
-      <div className={`grid grid-cols-2 gap-4 mb-6 ${shake ? 'shake' : ''} ${pulseCorrect ? 'pulse-correct' : ''}`}>
+      <div className={`grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 ${shake ? 'shake' : ''} ${pulseCorrect ? 'pulse-correct' : ''}`}>
         {currentQuestion.options.map((option, index) => {
           let buttonClass = 'p-4 rounded-xl font-medium transition-all text-left border-2 ';
 

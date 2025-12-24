@@ -98,27 +98,27 @@ export default function FlashCard({ onBack }: FlashCardProps) {
         </div>
       </div>
 
-      <div className="flex justify-center gap-4">
+      <div className="flex justify-center gap-2 sm:gap-4">
         <button
           onClick={handlePrev}
-          className="px-6 py-3 bg-white border-2 border-indigo-600 text-indigo-600 rounded-full font-medium hover:bg-indigo-50 transition-colors card-shadow flex items-center gap-2"
+          className="px-3 py-2 sm:px-6 sm:py-3 bg-white border-2 border-indigo-600 text-indigo-600 rounded-full font-medium hover:bg-indigo-50 transition-colors card-shadow flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
         >
-          <ChevronLeftIcon className="w-5 h-5" />
-          前へ
+          <ChevronLeftIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+          <span className="hidden sm:inline">前へ</span>
         </button>
         <button
           onClick={handleShuffle}
-          className="px-6 py-3 bg-white border-2 border-purple-600 text-purple-600 rounded-full font-medium hover:bg-purple-50 transition-colors card-shadow flex items-center gap-2"
+          className="px-3 py-2 sm:px-6 sm:py-3 bg-white border-2 border-purple-600 text-purple-600 rounded-full font-medium hover:bg-purple-50 transition-colors card-shadow flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
         >
-          <ShuffleIcon className="w-5 h-5" />
-          シャッフル
+          <ShuffleIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+          <span className="hidden sm:inline">シャッフル</span>
         </button>
         <button
           onClick={handleNext}
-          className="px-6 py-3 gradient-bg text-white rounded-full font-medium hover:opacity-90 transition-opacity card-shadow flex items-center gap-2"
+          className="px-3 py-2 sm:px-6 sm:py-3 gradient-bg text-white rounded-full font-medium hover:opacity-90 transition-opacity card-shadow flex items-center gap-1 sm:gap-2 text-sm sm:text-base"
         >
-          次へ
-          <ChevronRightIcon className="w-5 h-5" />
+          <span className="hidden sm:inline">次へ</span>
+          <ChevronRightIcon className="w-4 h-4 sm:w-5 sm:h-5" />
         </button>
       </div>
     </div>
