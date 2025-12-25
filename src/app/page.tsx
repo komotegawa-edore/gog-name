@@ -137,8 +137,8 @@ export default function Home() {
               <div className="flex items-center justify-center mb-2">
                 <CardIcon className="w-8 h-8 text-indigo-600" />
               </div>
-              <div className="text-4xl font-bold" style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #9333ea 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>3</div>
-              <div className="text-slate-600 mt-2">学習モード</div>
+              <div className="text-4xl font-bold" style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #9333ea 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>10</div>
+              <div className="text-slate-600 mt-2">セクション</div>
             </div>
             <div>
               <div className="flex items-center justify-center mb-2">

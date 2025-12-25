@@ -117,11 +117,7 @@ export default function Quiz({ onBack }: QuizProps) {
               <div className="flex items-center justify-between">
                 <div>
                   <div className="flex items-center gap-3 mb-2">
-                    <span className={`px-3 py-1 rounded-full text-sm font-bold ${
-                      section.id === 1 ? 'bg-green-100 text-green-700' :
-                      section.id === 2 ? 'bg-yellow-100 text-yellow-700' :
-                      'bg-red-100 text-red-700'
-                    }`}>
+                    <span className="px-3 py-1 rounded-full text-sm font-bold bg-indigo-100 text-indigo-700">
                       {section.name}
                     </span>
                   </div>
@@ -219,11 +215,7 @@ export default function Quiz({ onBack }: QuizProps) {
           戻る
         </button>
         <div className="flex items-center gap-4">
-          <span className={`px-2 py-1 rounded-full text-xs font-bold ${
-            selectedSection === 1 ? 'bg-green-100 text-green-700' :
-            selectedSection === 2 ? 'bg-yellow-100 text-yellow-700' :
-            'bg-red-100 text-red-700'
-          }`}>
+          <span className="px-2 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-700">
             {currentSection?.name}
           </span>
           <span className="text-slate-500 text-sm">

@@ -10,9 +10,16 @@ export interface DogBreed {
 }
 
 export const sections = [
-  { id: 1, name: "初級", description: "人気の犬種32問" },
-  { id: 2, name: "中級", description: "やや珍しい犬種32問" },
-  { id: 3, name: "上級", description: "珍しい犬種33問" },
+  { id: 1, name: "セクション1", description: "人気の犬種10問" },
+  { id: 2, name: "セクション2", description: "人気の犬種10問" },
+  { id: 3, name: "セクション3", description: "人気の犬種10問" },
+  { id: 4, name: "セクション4", description: "やや珍しい犬種10問" },
+  { id: 5, name: "セクション5", description: "やや珍しい犬種10問" },
+  { id: 6, name: "セクション6", description: "やや珍しい犬種10問" },
+  { id: 7, name: "セクション7", description: "やや珍しい犬種10問" },
+  { id: 8, name: "セクション8", description: "珍しい犬種9問" },
+  { id: 9, name: "セクション9", description: "珍しい犬種9問" },
+  { id: 10, name: "セクション10", description: "珍しい犬種9問" },
 ];
 
 export const dogBreeds: DogBreed[] = [
@@ -180,7 +187,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/terrier-yorkshire/IMG_3001.jpg",
       "https://images.dog.ceo/breeds/terrier-yorkshire/ema.jpg"
     ],
-    section: 1
+    section: 2
   },
   {
     id: 12,
@@ -195,7 +202,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/bulldog-english/jager-2.jpg",
       "https://images.dog.ceo/breeds/bulldog-english/mami.jpg"
     ],
-    section: 1
+    section: 2
   },
   {
     id: 13,
@@ -210,7 +217,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/pomeranian/n02112018_10158.jpg",
       "https://images.dog.ceo/breeds/pomeranian/n02112018_10174.jpg"
     ],
-    section: 1
+    section: 2
   },
   {
     id: 14,
@@ -225,7 +232,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/collie-border/brodie.jpg",
       "https://images.dog.ceo/breeds/collie-border/caesar.jpg"
     ],
-    section: 1
+    section: 2
   },
   {
     id: 15,
@@ -240,7 +247,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/boxer/IMG_3394.jpg",
       "https://images.dog.ceo/breeds/boxer/n02108089_1.jpg"
     ],
-    section: 1
+    section: 2
   },
   {
     id: 16,
@@ -255,7 +262,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/maltese/n02085936_10148.jpg",
       "https://images.dog.ceo/breeds/maltese/n02085936_10197.jpg"
     ],
-    section: 1
+    section: 2
   },
   {
     id: 17,
@@ -270,7 +277,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/corgi-cardigan/n02113186_1016.jpg",
       "https://images.dog.ceo/breeds/corgi-cardigan/n02113186_1030.jpg"
     ],
-    section: 1
+    section: 2
   },
   {
     id: 18,
@@ -285,7 +292,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/pug/AlfMNS.jpg",
       "https://images.dog.ceo/breeds/pug/DSCF7495-2.jpg"
     ],
-    section: 1
+    section: 2
   },
   {
     id: 19,
@@ -300,7 +307,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/spaniel-cocker/IMG_20181221_161745_654.jpg",
       "https://images.dog.ceo/breeds/spaniel-cocker/IMG_20181224_115048_680.jpg"
     ],
-    section: 1
+    section: 2
   },
   {
     id: 20,
@@ -315,7 +322,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/schnauzer-miniature/n02097047_1115.jpg",
       "https://images.dog.ceo/breeds/schnauzer-miniature/n02097047_1260.jpg"
     ],
-    section: 1
+    section: 2
   },
   {
     id: 21,
@@ -330,7 +337,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/shihtzu/n02086240_1016.jpg",
       "https://images.dog.ceo/breeds/shihtzu/n02086240_1059.jpg"
     ],
-    section: 1
+    section: 3
   },
   {
     id: 22,
@@ -345,7 +352,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/bulldog-boston/n02096585_10380.jpg",
       "https://images.dog.ceo/breeds/bulldog-boston/n02096585_10452.jpg"
     ],
-    section: 1
+    section: 3
   },
   {
     id: 23,
@@ -360,7 +367,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/frise-bichon/3.jpg",
       "https://images.dog.ceo/breeds/frise-bichon/4.jpg"
     ],
-    section: 1
+    section: 3
   },
   {
     id: 24,
@@ -375,7 +382,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/havanese/00100trPORTRAIT_00100_BURST20191112123933390_COVER.jpg",
       "https://images.dog.ceo/breeds/havanese/00100trPORTRAIT_00100_BURST20191126134713895_COVER.jpg"
     ],
-    section: 1
+    section: 3
   },
   {
     id: 25,
@@ -390,7 +397,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/doberman/n02107142_10009.jpg",
       "https://images.dog.ceo/breeds/doberman/n02107142_10036.jpg"
     ],
-    section: 1
+    section: 3
   },
   {
     id: 26,
@@ -403,7 +410,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/dalmatian/cooper1.jpg",
       "https://images.dog.ceo/breeds/dalmatian/cooper2.jpg"
     ],
-    section: 1
+    section: 3
   },
   {
     id: 27,
@@ -418,7 +425,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/rottweiler/n02106550_1033.jpg",
       "https://images.dog.ceo/breeds/rottweiler/n02106550_10375.jpg"
     ],
-    section: 1
+    section: 3
   },
   {
     id: 28,
@@ -433,7 +440,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/australian-shepherd/pepper.jpg",
       "https://images.dog.ceo/breeds/australian-shepherd/pepper2.jpg"
     ],
-    section: 1
+    section: 3
   },
   {
     id: 29,
@@ -448,7 +455,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/pinscher-miniature/2015-06-01_17.27.57x.jpg",
       "https://images.dog.ceo/breeds/pinscher-miniature/2016-06-16_13.13.45x.jpg"
     ],
-    section: 1
+    section: 3
   },
   {
     id: 30,
@@ -463,7 +470,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/pembroke/n02113023_11091.jpg",
       "https://images.dog.ceo/breeds/pembroke/n02113023_11103.jpg"
     ],
-    section: 1
+    section: 3
   },
   {
     id: 31,
@@ -477,7 +484,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/labradoodle/labradoodle-forrest.jpg",
       "https://images.dog.ceo/breeds/labradoodle/lola.jpg"
     ],
-    section: 1
+    section: 4
   },
   {
     id: 32,
@@ -492,10 +499,10 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/stbernard/n02109525_10146.jpg",
       "https://images.dog.ceo/breeds/stbernard/n02109525_10215.jpg"
     ],
-    section: 1
+    section: 4
   },
 
-  // セクション2: 中級
+  // セクション4
   {
     id: 33,
     name: "Akita",
@@ -509,7 +516,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/akita/Akita_Inu_dog.jpg",
       "https://images.dog.ceo/breeds/akita/Akita_hiking_in_Shpella_e_Pellumbasit.jpg"
     ],
-    section: 2
+    section: 4
   },
   {
     id: 34,
@@ -524,7 +531,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/samoyed/n02111889_10059.jpg",
       "https://images.dog.ceo/breeds/samoyed/n02111889_10084.jpg"
     ],
-    section: 2
+    section: 4
   },
   {
     id: 35,
@@ -539,7 +546,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/weimaraner/n02092339_110.jpg",
       "https://images.dog.ceo/breeds/weimaraner/n02092339_1100.jpg"
     ],
-    section: 2
+    section: 4
   },
   {
     id: 36,
@@ -554,7 +561,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/papillon/n02086910_103.jpg",
       "https://images.dog.ceo/breeds/papillon/n02086910_1048.jpg"
     ],
-    section: 2
+    section: 4
   },
   {
     id: 37,
@@ -569,7 +576,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/chow/n02112137_10134.jpg",
       "https://images.dog.ceo/breeds/chow/n02112137_1015.jpg"
     ],
-    section: 2
+    section: 4
   },
   {
     id: 38,
@@ -584,7 +591,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/dane-great/dane-2.jpg",
       "https://images.dog.ceo/breeds/dane-great/dane-3.jpg"
     ],
-    section: 2
+    section: 4
   },
   {
     id: 39,
@@ -599,7 +606,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/hound-basset/n02088238_10028.jpg",
       "https://images.dog.ceo/breeds/hound-basset/n02088238_10051.jpg"
     ],
-    section: 2
+    section: 4
   },
   {
     id: 40,
@@ -614,7 +621,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/vizsla/n02100583_10367.jpg",
       "https://images.dog.ceo/breeds/vizsla/n02100583_10425.jpg"
     ],
-    section: 2
+    section: 4
   },
   {
     id: 41,
@@ -629,7 +636,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/whippet/n02091134_10242.jpg",
       "https://images.dog.ceo/breeds/whippet/n02091134_10395.jpg"
     ],
-    section: 2
+    section: 5
   },
   {
     id: 42,
@@ -644,7 +651,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/airedale/n02096051_1111.jpg",
       "https://images.dog.ceo/breeds/airedale/n02096051_1121.jpg"
     ],
-    section: 2
+    section: 5
   },
   {
     id: 43,
@@ -659,7 +666,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/setter-irish/n02100877_1020.jpg",
       "https://images.dog.ceo/breeds/setter-irish/n02100877_1061.jpg"
     ],
-    section: 2
+    section: 5
   },
   {
     id: 44,
@@ -674,7 +681,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/setter-english/n02100735_10038.jpg",
       "https://images.dog.ceo/breeds/setter-english/n02100735_10064.jpg"
     ],
-    section: 2
+    section: 5
   },
   {
     id: 45,
@@ -689,7 +696,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/pointer-german/n02100236_111.jpg",
       "https://images.dog.ceo/breeds/pointer-german/n02100236_1164.jpg"
     ],
-    section: 2
+    section: 5
   },
   {
     id: 46,
@@ -704,7 +711,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/spaniel-brittany/n02101388_10348.jpg",
       "https://images.dog.ceo/breeds/spaniel-brittany/n02101388_10373.jpg"
     ],
-    section: 2
+    section: 5
   },
   {
     id: 47,
@@ -719,7 +726,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/springer-english/n02102040_1082.jpg",
       "https://images.dog.ceo/breeds/springer-english/n02102040_113.jpg"
     ],
-    section: 2
+    section: 5
   },
   {
     id: 48,
@@ -734,7 +741,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/malamute/n02110063_10567.jpg",
       "https://images.dog.ceo/breeds/malamute/n02110063_1058.jpg"
     ],
-    section: 2
+    section: 5
   },
   {
     id: 49,
@@ -749,7 +756,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/malinois/n02105162_10260.jpg",
       "https://images.dog.ceo/breeds/malinois/n02105162_10309.jpg"
     ],
-    section: 2
+    section: 5
   },
   {
     id: 50,
@@ -764,7 +771,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/sheepdog-shetland/n02105855_10608.jpg",
       "https://images.dog.ceo/breeds/sheepdog-shetland/n02105855_10619.jpg"
     ],
-    section: 2
+    section: 5
   },
   {
     id: 51,
@@ -779,7 +786,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/sheepdog-english/n02105641_10048.jpg",
       "https://images.dog.ceo/breeds/sheepdog-english/n02105641_10051.jpg"
     ],
-    section: 2
+    section: 6
   },
   {
     id: 52,
@@ -794,7 +801,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/newfoundland/n02111277_1029.jpg",
       "https://images.dog.ceo/breeds/newfoundland/n02111277_10333.jpg"
     ],
-    section: 2
+    section: 6
   },
   {
     id: 53,
@@ -809,7 +816,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/pyrenees/n02111500_1031.jpg",
       "https://images.dog.ceo/breeds/pyrenees/n02111500_109.jpg"
     ],
-    section: 2
+    section: 6
   },
   {
     id: 54,
@@ -824,7 +831,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/ridgeback-rhodesian/boaz-1.jpg",
       "https://images.dog.ceo/breeds/ridgeback-rhodesian/boaz-2.jpg"
     ],
-    section: 2
+    section: 6
   },
   {
     id: 55,
@@ -839,7 +846,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/terrier-westhighland/E1D28A98-83F7-445E-90CA-B5C1F1DDD09D.jpg",
       "https://images.dog.ceo/breeds/terrier-westhighland/E2E733F5-3C33-4482-BD4B-053AC6633D30.jpg"
     ],
-    section: 2
+    section: 6
   },
   {
     id: 56,
@@ -854,7 +861,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/terrier-scottish/n02097298_10965.jpg",
       "https://images.dog.ceo/breeds/terrier-scottish/n02097298_11702.jpg"
     ],
-    section: 2
+    section: 6
   },
   {
     id: 57,
@@ -869,7 +876,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/terrier-cairn/n02096177_10333.jpg",
       "https://images.dog.ceo/breeds/terrier-cairn/n02096177_10414.jpg"
     ],
-    section: 2
+    section: 6
   },
   {
     id: 58,
@@ -884,7 +891,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/terrier-irish/n02093991_1105.jpg",
       "https://images.dog.ceo/breeds/terrier-irish/n02093991_114.jpg"
     ],
-    section: 2
+    section: 6
   },
   {
     id: 59,
@@ -899,7 +906,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/terrier-fox/n02095314_105.jpg",
       "https://images.dog.ceo/breeds/terrier-fox/n02095314_1054.jpg"
     ],
-    section: 2
+    section: 6
   },
   {
     id: 60,
@@ -914,7 +921,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/terrier-australian/n02096294_1133.jpg",
       "https://images.dog.ceo/breeds/terrier-australian/n02096294_1147.jpg"
     ],
-    section: 2
+    section: 6
   },
   {
     id: 61,
@@ -929,7 +936,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/terrier-border/n02093754_1111.jpg",
       "https://images.dog.ceo/breeds/terrier-border/n02093754_1148.jpg"
     ],
-    section: 2
+    section: 7
   },
   {
     id: 62,
@@ -944,7 +951,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/terrier-wheaten/n02098105_1009.jpg",
       "https://images.dog.ceo/breeds/terrier-wheaten/n02098105_1024.jpg"
     ],
-    section: 2
+    section: 7
   },
   {
     id: 63,
@@ -959,7 +966,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/cattledog-australian/IMG_1062.jpg",
       "https://images.dog.ceo/breeds/cattledog-australian/IMG_1211.jpg"
     ],
-    section: 2
+    section: 7
   },
   {
     id: 64,
@@ -974,10 +981,10 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/greyhound-italian/n02091032_10314.jpg",
       "https://images.dog.ceo/breeds/greyhound-italian/n02091032_1034.jpg"
     ],
-    section: 2
+    section: 7
   },
 
-  // セクション3: 上級
+  // セクション7
   {
     id: 65,
     name: "Basenji",
@@ -991,7 +998,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/basenji/n02110806_1035.jpg",
       "https://images.dog.ceo/breeds/basenji/n02110806_1100.jpg"
     ],
-    section: 3
+    section: 7
   },
   {
     id: 66,
@@ -1003,7 +1010,7 @@ export const dogBreeds: DogBreed[] = [
     images: [
       "https://images.dog.ceo/breeds/sharpei/noel.jpg"
     ],
-    section: 3
+    section: 7
   },
   {
     id: 67,
@@ -1018,7 +1025,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/affenpinscher/n02110627_10439.jpg",
       "https://images.dog.ceo/breeds/affenpinscher/n02110627_10680.jpg"
     ],
-    section: 3
+    section: 7
   },
   {
     id: 68,
@@ -1033,7 +1040,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/appenzeller/n02107908_1195.jpg",
       "https://images.dog.ceo/breeds/appenzeller/n02107908_1235.jpg"
     ],
-    section: 3
+    section: 7
   },
   {
     id: 69,
@@ -1048,7 +1055,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/borzoi/n02090622_10343.jpg",
       "https://images.dog.ceo/breeds/borzoi/n02090622_10492.jpg"
     ],
-    section: 3
+    section: 7
   },
   {
     id: 70,
@@ -1063,7 +1070,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/bouvier/n02106382_1005.jpg",
       "https://images.dog.ceo/breeds/bouvier/n02106382_1016.jpg"
     ],
-    section: 3
+    section: 7
   },
   {
     id: 71,
@@ -1078,7 +1085,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/briard/n02105251_1240.jpg",
       "https://images.dog.ceo/breeds/briard/n02105251_1382.jpg"
     ],
-    section: 3
+    section: 8
   },
   {
     id: 72,
@@ -1093,7 +1100,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/clumber/n02101556_1469.jpg",
       "https://images.dog.ceo/breeds/clumber/n02101556_1665.jpg"
     ],
-    section: 3
+    section: 8
   },
   {
     id: 73,
@@ -1108,7 +1115,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/cotondetulear/IMAG1063.jpg",
       "https://images.dog.ceo/breeds/cotondetulear/IMG_20160830_202631573.jpg"
     ],
-    section: 3
+    section: 8
   },
   {
     id: 74,
@@ -1123,7 +1130,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/deerhound-scottish/n02092002_10699.jpg",
       "https://images.dog.ceo/breeds/deerhound-scottish/n02092002_109.jpg"
     ],
-    section: 3
+    section: 8
   },
   {
     id: 75,
@@ -1138,7 +1145,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_1213.jpg",
       "https://images.dog.ceo/breeds/elkhound-norwegian/n02091467_1330.jpg"
     ],
-    section: 3
+    section: 8
   },
   {
     id: 76,
@@ -1153,7 +1160,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/entlebucher/n02108000_1073.jpg",
       "https://images.dog.ceo/breeds/entlebucher/n02108000_1087.jpg"
     ],
-    section: 3
+    section: 8
   },
   {
     id: 77,
@@ -1168,7 +1175,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/hound-afghan/n02088094_10715.jpg",
       "https://images.dog.ceo/breeds/hound-afghan/n02088094_10822.jpg"
     ],
-    section: 3
+    section: 8
   },
   {
     id: 78,
@@ -1183,7 +1190,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/hound-blood/n02088466_10309.jpg",
       "https://images.dog.ceo/breeds/hound-blood/n02088466_10331.jpg"
     ],
-    section: 3
+    section: 8
   },
   {
     id: 79,
@@ -1198,7 +1205,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/keeshond/n02112350_10085.jpg",
       "https://images.dog.ceo/breeds/keeshond/n02112350_10100.jpg"
     ],
-    section: 3
+    section: 8
   },
   {
     id: 80,
@@ -1213,7 +1220,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/komondor/n02105505_1145.jpg",
       "https://images.dog.ceo/breeds/komondor/n02105505_1159.jpg"
     ],
-    section: 3
+    section: 9
   },
   {
     id: 81,
@@ -1228,7 +1235,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/kuvasz/n02104029_1138.jpg",
       "https://images.dog.ceo/breeds/kuvasz/n02104029_1150.jpg"
     ],
-    section: 3
+    section: 9
   },
   {
     id: 82,
@@ -1243,7 +1250,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/leonberg/n02111129_1153.jpg",
       "https://images.dog.ceo/breeds/leonberg/n02111129_1181.jpg"
     ],
-    section: 3
+    section: 9
   },
   {
     id: 83,
@@ -1258,7 +1265,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/lhasa/n02098413_10285.jpg",
       "https://images.dog.ceo/breeds/lhasa/n02098413_10590.jpg"
     ],
-    section: 3
+    section: 9
   },
   {
     id: 84,
@@ -1273,7 +1280,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/mastiff-bull/n02108422_1017.jpg",
       "https://images.dog.ceo/breeds/mastiff-bull/n02108422_1079.jpg"
     ],
-    section: 3
+    section: 9
   },
   {
     id: 85,
@@ -1288,7 +1295,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/mastiff-tibetan/n02108551_103.jpg",
       "https://images.dog.ceo/breeds/mastiff-tibetan/n02108551_1091.jpg"
     ],
-    section: 3
+    section: 9
   },
   {
     id: 86,
@@ -1303,7 +1310,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/otterhound/n02091635_1083.jpg",
       "https://images.dog.ceo/breeds/otterhound/n02091635_1102.jpg"
     ],
-    section: 3
+    section: 9
   },
   {
     id: 87,
@@ -1318,7 +1325,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/pekinese/n02086079_1020.jpg",
       "https://images.dog.ceo/breeds/pekinese/n02086079_10294.jpg"
     ],
-    section: 3
+    section: 9
   },
   {
     id: 88,
@@ -1333,7 +1340,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/redbone/n02090379_1102.jpg",
       "https://images.dog.ceo/breeds/redbone/n02090379_1199.jpg"
     ],
-    section: 3
+    section: 9
   },
   {
     id: 89,
@@ -1348,7 +1355,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/retriever-flatcoated/n02099267_1095.jpg",
       "https://images.dog.ceo/breeds/retriever-flatcoated/n02099267_1142.jpg"
     ],
-    section: 3
+    section: 10
   },
   {
     id: 90,
@@ -1363,7 +1370,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/saluki/n02091831_10576.jpg",
       "https://images.dog.ceo/breeds/saluki/n02091831_10593.jpg"
     ],
-    section: 3
+    section: 10
   },
   {
     id: 91,
@@ -1378,7 +1385,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/schipperke/n02104365_10139.jpg",
       "https://images.dog.ceo/breeds/schipperke/n02104365_10247.jpg"
     ],
-    section: 3
+    section: 10
   },
   {
     id: 92,
@@ -1393,7 +1400,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/schnauzer-giant/n02097130_1119.jpg",
       "https://images.dog.ceo/breeds/schnauzer-giant/n02097130_1159.jpg"
     ],
-    section: 3
+    section: 10
   },
   {
     id: 93,
@@ -1408,7 +1415,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/setter-gordon/n02101006_1126.jpg",
       "https://images.dog.ceo/breeds/setter-gordon/n02101006_114.jpg"
     ],
-    section: 3
+    section: 10
   },
   {
     id: 94,
@@ -1423,7 +1430,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/spaniel-irish/n02102973_1116.jpg",
       "https://images.dog.ceo/breeds/spaniel-irish/n02102973_1140.jpg"
     ],
-    section: 3
+    section: 10
   },
   {
     id: 95,
@@ -1438,7 +1445,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/terrier-kerryblue/n02093859_1120.jpg",
       "https://images.dog.ceo/breeds/terrier-kerryblue/n02093859_1136.jpg"
     ],
-    section: 3
+    section: 10
   },
   {
     id: 96,
@@ -1453,7 +1460,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/terrier-norfolk/n02094114_1076.jpg",
       "https://images.dog.ceo/breeds/terrier-norfolk/n02094114_1173.jpg"
     ],
-    section: 3
+    section: 10
   },
   {
     id: 97,
@@ -1468,7 +1475,7 @@ export const dogBreeds: DogBreed[] = [
       "https://images.dog.ceo/breeds/wolfhound-irish/n02090721_1041.jpg",
       "https://images.dog.ceo/breeds/wolfhound-irish/n02090721_1085.jpg"
     ],
-    section: 3
+    section: 10
   }
 ];
 
