@@ -130,7 +130,7 @@ export default function Home() {
               <div className="flex items-center justify-center mb-2">
                 <DogIcon className="w-8 h-8 text-indigo-600" />
               </div>
-              <div className="text-4xl font-bold" style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #9333ea 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>30</div>
+              <div className="text-4xl font-bold" style={{ background: 'linear-gradient(135deg, #4f46e5 0%, #9333ea 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>97</div>
               <div className="text-slate-600 mt-2">犬種を収録</div>
             </div>
             <div>
