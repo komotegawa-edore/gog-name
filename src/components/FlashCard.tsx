@@ -177,7 +177,7 @@ export default function FlashCard({ onBack }: FlashCardProps) {
           </div>
 
           <div className="flip-card-back absolute w-full h-full rounded-2xl gradient-bg overflow-hidden cursor-pointer" onClick={handleFlip}>
-            <div className="relative w-full h-56 sm:h-64 bg-white/10">
+            <div className="relative w-full h-72 sm:h-80 bg-white/10">
               <Image
                 src={currentDog.images[currentImageIndex]}
                 alt={currentDog.nameJa}
@@ -207,13 +207,10 @@ export default function FlashCard({ onBack }: FlashCardProps) {
                 </div>
               )}
             </div>
-            <div className="p-4 text-white text-center">
-              <h2 className="text-2xl font-bold mb-1">{currentDog.nameJa}</h2>
-              <p className="text-lg opacity-90 mb-2">{currentDog.name}</p>
-              <div className="text-sm space-y-1 opacity-80">
-                <p>原産国: {currentDog.origin} | サイズ: {currentDog.size === 'small' ? '小型' : currentDog.size === 'medium' ? '中型' : '大型'}</p>
-                <p>{currentDog.description}</p>
-              </div>
+            <div className="p-3 text-white text-center">
+              <h2 className="text-2xl font-bold">{currentDog.nameJa}</h2>
+              <p className="text-base opacity-90">{currentDog.name}</p>
+              <p className="text-xs opacity-70 mt-1">原産国: {currentDog.origin} | {currentDog.size === 'small' ? '小型犬' : currentDog.size === 'medium' ? '中型犬' : '大型犬'}</p>
             </div>
           </div>
         </div>
