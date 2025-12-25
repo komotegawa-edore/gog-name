@@ -132,8 +132,8 @@ export default function FlashCard({ onBack }: FlashCardProps) {
   const currentSection = sections.find(s => s.id === selectedSection);
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      <div className="flex justify-between items-center mb-6">
+    <div className="w-full max-w-xl mx-auto flex flex-col items-center justify-center min-h-[80vh]">
+      <div className="w-full flex justify-between items-center mb-4">
         <button
           onClick={handleBackToSections}
           className="flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium transition-colors"
@@ -156,33 +156,33 @@ export default function FlashCard({ onBack }: FlashCardProps) {
       </div>
 
       <div
-        className="flip-card h-96 cursor-pointer mb-6"
+        className="flip-card w-full h-[28rem] sm:h-[32rem] cursor-pointer mb-4"
         onClick={handleFlip}
       >
         <div className={`flip-card-inner relative w-full h-full ${isFlipped ? 'flipped' : ''}`}>
           <div className="flip-card-front absolute w-full h-full rounded-2xl bg-white card-shadow-lg overflow-hidden">
-            <div className="relative w-full h-64 bg-slate-100">
+            <div className="relative w-full h-80 sm:h-96 bg-slate-100">
               <Image
                 src={currentDog.images[0]}
                 alt={currentDog.nameJa}
                 fill
-                className="object-contain"
+                className="object-contain p-2"
                 unoptimized
               />
             </div>
-            <div className="p-6 text-center">
-              <p className="text-slate-400 text-sm mb-2">タップして答えを見る</p>
+            <div className="p-4 text-center">
+              <p className="text-slate-400 text-sm mb-1">タップして答えを見る</p>
               <p className="text-lg text-slate-600">この犬種の名前は?</p>
             </div>
           </div>
 
-          <div className="flip-card-back absolute w-full h-full rounded-2xl gradient-bg overflow-hidden" onClick={(e) => e.stopPropagation()}>
-            <div className="relative w-full h-44 bg-white/10">
+          <div className="flip-card-back absolute w-full h-full rounded-2xl gradient-bg overflow-hidden cursor-pointer" onClick={handleFlip}>
+            <div className="relative w-full h-56 sm:h-64 bg-white/10">
               <Image
                 src={currentDog.images[currentImageIndex]}
                 alt={currentDog.nameJa}
                 fill
-                className="object-contain"
+                className="object-contain p-2"
                 unoptimized
               />
               {currentDog.images.length > 1 && (

@@ -209,8 +209,8 @@ export default function Quiz({ onBack }: QuizProps) {
   const currentSection = sections.find(s => s.id === selectedSection);
 
   return (
-    <div className="w-full max-w-2xl mx-auto">
-      <div className="flex justify-between items-center mb-6">
+    <div className="w-full max-w-xl mx-auto flex flex-col items-center justify-center min-h-[80vh]">
+      <div className="w-full flex justify-between items-center mb-4">
         <button
           onClick={handleBackToSections}
           className="flex items-center gap-2 text-indigo-600 hover:text-indigo-800 font-medium transition-colors"
@@ -235,24 +235,24 @@ export default function Quiz({ onBack }: QuizProps) {
         </div>
       </div>
 
-      <div className="bg-white rounded-2xl card-shadow-lg overflow-hidden mb-6">
-        <div className="relative w-full h-64 bg-slate-100">
+      <div className="w-full bg-white rounded-2xl card-shadow-lg overflow-hidden mb-4">
+        <div className="relative w-full h-72 sm:h-80 bg-slate-100">
           <Image
             src={currentQuestion.dog.images[0]}
             alt="犬の写真"
             fill
-            className="object-contain"
+            className="object-contain p-2"
             unoptimized
           />
         </div>
-        <div className="p-4 sm:p-6">
+        <div className="p-3 sm:p-4">
           <h2 className="text-lg sm:text-xl font-bold text-slate-800 text-center">
             この犬種は何でしょう?
           </h2>
         </div>
       </div>
 
-      <div className={`grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6 ${shake ? 'shake' : ''} ${pulseCorrect ? 'pulse-correct' : ''}`}>
+      <div className={`w-full grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4 ${shake ? 'shake' : ''} ${pulseCorrect ? 'pulse-correct' : ''}`}>
         {currentQuestion.options.map((option, index) => {
           let buttonClass = 'p-4 rounded-xl font-medium transition-all text-left border-2 ';
 
